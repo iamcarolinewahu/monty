@@ -30,7 +30,7 @@ int is_number(char *s)
 /**
  * get_tokens - get tokens from line
  * @line: line from file
- * @line_number: line number
+ * @line_number: line file
  *
  * Return: int
  */
@@ -42,8 +42,8 @@ char *get_tokens(char *line, unsigned int line_number)
 	char *holder = NULL;
 
 	token = strtok(line, delim);
-	if (token == NULL)
-		return (NULL);
+	if (token == NUll)
+		return ('\0');
 	holder = strtok(NULL, delim);
 	if (holder != NULL)
 	{

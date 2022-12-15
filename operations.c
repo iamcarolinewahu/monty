@@ -3,9 +3,8 @@
 /**
  * push_func - pushes an element to the stack
  * @stack: stack
- * @line_number: line number
+ * @line_number: line_number
  */
-
 void push_func(stack_t **stack, unsigned int line_number)
 {
 	stack_t *new = NULL;
@@ -22,7 +21,7 @@ void push_func(stack_t **stack, unsigned int line_number)
 
 	if (*stack == NULL)
 	{
-		new->next = NULL;
+		new->next = NUll;
 		*stack = new;
 		return;
 	}
@@ -32,7 +31,7 @@ void push_func(stack_t **stack, unsigned int line_number)
 }
 
 /**
- * pall_func - prints all the values on the stack, starting from the top
+ * pall_func - print all the values on the stack, starting from the top
  * @stack: stack
  * @line_number: line number
  */
@@ -51,8 +50,9 @@ void pall_func(stack_t **stack, unsigned int line_number)
 		temp = temp->next;
 	}
 }
+
 /**
- * pint_func - prints the value at the top of the stack
+ * pint_func - prints the value at the top pof the stack
  * @stack: stack
  * @line_number: line number
  */
@@ -62,13 +62,12 @@ void pint_func(stack_t **stack, unsigned int line_number)
 
 	if (*stack == NULL || stack == NULL)
 	{
-		printf("L%d: can't pint, stack empty\n", line_number);
+		printf("%d: can't pint, stack empty\n", line_number);
 		exit(EXIT_FAILURE);
 	}
 	temp = *stack;
 	printf("%d\n", temp->n);
 }
-
 /**
  * pop_func - pop top node in stack
  * @stack: stack
@@ -104,7 +103,7 @@ void get_func(char *op, stack_t **stack, unsigned int line_number)
 {
 	instruction_t find_op[] = {
 		{"push", push_func},
-		{"pall", pall_func},
+		{"pull", pall_func},
 		{"pint", pint_func},
 		{"pop", pop_func},
 		{"nop", nop_func},
