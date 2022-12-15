@@ -1,5 +1,4 @@
 			     			Cell c0 = 0
-
 > ++++ ++++  				Cell c1 = 8
 
 [        					Start loop
